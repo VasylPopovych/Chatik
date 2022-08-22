@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
-import ChatPage from "./pages/ChatPage";
-import AuthPage from "./pages/AuthPage";
-import NotFoundPage from "./pages/NotFoundPage";
+import ChatPage from "./pages/chatPage/ChatPage";
+import AuthPage from "./pages/authPage/AuthPage";
+import NotFoundPage from "./pages/notFoundPage/NotFoundPage";
 
 const Router = () => {
   const [isLoggedUser, setLoggedUser] = useState(true);

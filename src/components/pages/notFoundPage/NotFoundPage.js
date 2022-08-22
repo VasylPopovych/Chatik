@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import classes from "./notFoundPage.module.scss";
 
 const NotFoundPage = () => {
   let navigate = useNavigate();
@@ -6,9 +7,9 @@ const NotFoundPage = () => {
   const toHomePage = () => {
     navigate("/");
   };
-  // in future: create button "Go to Home"!
+
   return (
-    <div className="notFoundPage">
+    <div className={classes.notFoundPage}>
       <h1>Page Not Found</h1>
       <button onClick={toHomePage}>Home Page</button>
     </div>

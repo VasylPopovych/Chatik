@@ -4,11 +4,11 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  //background-color: #efe9e7;
   background: #e4d1d1;
   background: radial-gradient(ellipse farthest-corner at center center, #e4d1d1 0%, #746d6e 80%);
   background: -webkit-radial-gradient(ellipse farthest-corner at center center, #e4d1d1 0%, #746d6e 80%);
   background: -moz-radial-gradient(ellipse farthest-corner at center center, #e4d1d1 0%, #746d6e 80%);
+  font-family: Arial, Helvetica, sans-serif;
   h1 {
     font-size: 50px;
     font-weight: bold;
@@ -17,9 +17,9 @@
     margin-top: 20px;
     background-color: rgb(159, 168, 168);
     height: 40px;
-    width: 100px;
+    width: 120px;
     border-radius: 5px;
-    //box-shadow: 3px 6px 5px 0px rgba(173, 158, 158, 0.75);
+    font-weight: bold;
     &:hover {
       background-color: #726d6b;
     }
