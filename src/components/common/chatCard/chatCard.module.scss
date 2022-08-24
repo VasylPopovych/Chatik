@@ -1,4 +1,4 @@
-.chatCard {
+.wrapper {
   display: flex;
   height: 100px;
   width: 100%;
@@ -8,4 +8,17 @@
   &:hover {
     background-color: gainsboro;
   }
+}
+
+.name_message {
+}
+
+.time {
+}
+
+.name {
+  font-weight: bold;
+}
+
+.message {
 }
