@@ -65,13 +65,13 @@ export const messagesHistoryUser4 = [
   {
     id: 1,
     owner: true,
-    text: "zxczxcz  zc zxc zxc zc ",
+    text: "Dobryi den, everybody!!!",
     time: "15 Jun 2022, 11:33",
   },
   {
     id: 2,
     owner: false,
-    text: "zxc zcx zxc zxc zc ",
+    text: "Hello Boris",
     time: "15 Jun 2022, 15:35",
   },
   {

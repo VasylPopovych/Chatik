@@ -30,7 +30,7 @@ export const usersData = [
   },
   {
     id: 4,
-    name: "Alan",
+    name: "Boris Johnson",
     avatar: user4,
     messagesHistory: messagesHistoryUser4,
   },
