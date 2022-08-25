@@ -1,9 +1,8 @@
-import React, { useContext } from "react";
+import { observer } from "mobx-react-lite";
+import React from "react";
 import classes from "./avatar.module.scss";
 
 const Avatar = ({ props }) => {
-  console.log(props);
-
   return (
     <div className={classes.avatar_wrapper}>
       <img src={props} alt="user_avatar" />
@@ -11,4 +10,4 @@ const Avatar = ({ props }) => {
   );
 };
 
-export default Avatar;
+export default observer(Avatar);

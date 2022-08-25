@@ -1,0 +1,19 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid grey;
+  margin: 10px;
+  padding-right: 10px;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+}
+
+.text {
+  border-radius: 25%;
+  border: 1px solid grey;
+  background-color: burlywood;
+  padding: 10px;
+}
