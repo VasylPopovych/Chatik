@@ -11,7 +11,7 @@ const ChatCard = ({ props }) => {
 
   return (
     <div onClick={getSelectedUser} className={classes.wrapper}>
-      <Avatar props={props.avatar} />
+      <Avatar props={props.avatar} isVerified={true} />
       <div className={classes.name_message}>
         <div className={classes.name}>{props.name}</div>
         <div className={classes.message}>{props.messagesHistory.at(-1).text}</div>
