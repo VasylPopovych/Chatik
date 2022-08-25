@@ -7,7 +7,6 @@ import MessagesBox from "./messagesBox/MessagesBox";
 const ChatBoard = () => {
   return (
     <main className={classes.chatBoard}>
-      <ChatBoardHeader />
       <MessagesBox />
       <MessageInput />
     </main>
