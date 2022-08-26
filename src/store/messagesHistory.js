@@ -3,19 +3,19 @@ export const messagesHistoryUser1 = [
     id: 1,
     owner: true,
     text: "Hello from Alise",
-    time: "15 Jun 2022, 15:33",
+    time: new Date(1661501111180),
   },
   {
     id: 2,
     owner: false,
     text: "Hello Alise",
-    time: "15 Jun 2022, 15:35",
+    time: new Date(1661507121180),
   },
   {
     id: 3,
     owner: true,
     text: "How are you??",
-    time: "15 Jun 2022, 15:39",
+    time: new Date(1661507131180),
   },
 ];
 
@@ -24,19 +24,19 @@ export const messagesHistoryUser2 = [
     id: 1,
     owner: true,
     text: "dfgf d fgdfg dfg ",
-    time: "15 Jun 2022, 15:33",
+    time: new Date(1661507211180),
   },
   {
     id: 2,
     owner: false,
     text: "dfg  dfgg ",
-    time: "15 Jun 2022, 15:45",
+    time: new Date(1661507311280),
   },
   {
     id: 3,
     owner: true,
     text: "sdffsdf sdbxb xbxb",
-    time: "15 Jun 2022, 16:39",
+    time: new Date(1661507341180),
   },
 ];
 
@@ -45,19 +45,19 @@ export const messagesHistoryUser3 = [
     id: 1,
     owner: true,
     text: "wer wet wet w ",
-    time: "15 Jun 2022, 15:33",
+    time: new Date(1611111111111),
   },
   {
     id: 2,
     owner: false,
     text: "wetwet w wet wet w",
-    time: "15 Jun 2022, 16:35",
+    time: new Date(1612111111111),
   },
   {
     id: 3,
     owner: true,
     text: "The last and the latest message",
-    time: "15 Jun 2022, 17:39",
+    time: new Date(1612411111111),
   },
 ];
 
@@ -66,19 +66,19 @@ export const messagesHistoryUser4 = [
     id: 1,
     owner: true,
     text: "Dobryi den, everybody!!!",
-    time: "15 Jun 2022, 11:33",
+    time: new Date(1612111111111),
   },
   {
     id: 2,
     owner: false,
     text: "Hello Boris",
-    time: "15 Jun 2022, 15:35",
+    time: new Date(1613111111111),
   },
   {
     id: 3,
     owner: true,
     text: "zxc zxc zxc zc zc zxc",
-    time: "15 Jun 2022, 15:59",
+    time: new Date(1614111111111),
   },
 ];
 
@@ -87,24 +87,24 @@ export const messagesHistoryUser5 = [
     id: 1,
     owner: true,
     text: "hjlhjlh l hjlhjl hj l",
-    time: "15 Jun 2022, 12:33",
+    time: new Date(1621111111111),
   },
   {
     id: 2,
     owner: false,
     text: "hjlh hjlhjl h",
-    time: "15 Jun 2022, 13:35",
+    time: new Date(1622111111111),
   },
   {
     id: 3,
     owner: true,
     text: "hjl hjl hj lh h jl ",
-    time: "15 Jun 2022, 18:39",
+    time: new Date(1623111111111),
   },
   {
     id: 4,
     owner: true,
     text: "The last message",
-    time: "15 Jun 2022, 18:39",
+    time: new Date(1624111111111),
   },
 ];

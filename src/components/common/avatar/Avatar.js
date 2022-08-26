@@ -4,7 +4,6 @@ import classes from "./avatar.module.scss";
 import VerificationIcon from "../verificationIcon/VerificationIcon";
 
 const Avatar = ({ props, isVerified }) => {
-  console.log(isVerified);
   if (isVerified) {
     return (
       <div className={classes.avatar_wrapper}>

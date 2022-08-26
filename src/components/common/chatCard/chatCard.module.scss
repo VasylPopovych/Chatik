@@ -5,20 +5,18 @@
   background-color: white;
   border: 1px solid grey;
   cursor: pointer;
+  justify-content: space-between;
   &:hover {
     background-color: gainsboro;
   }
-}
-
-.name_message {
-}
-
-.time {
-}
-
-.name {
-  font-weight: bold;
-}
-
-.message {
+  .name_message {
+    .name {
+      font-weight: bold;
+    }
+    .message {
+    }
+  }
+  .time {
+    font-size: 12px;
+  }
 }
