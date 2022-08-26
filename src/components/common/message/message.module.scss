@@ -18,3 +18,25 @@
     }
   }
 }
+
+.wrapper_myMessage {
+  display: flex;
+  justify-content: flex-end;
+  border: 1px solid grey;
+  margin: 10px;
+  padding-right: 10px;
+  .body {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    .text {
+      border-radius: 25px;
+      border: 1px solid grey;
+      background-color: rgb(92, 86, 78);
+      padding: 10px;
+    }
+    .time {
+      font-size: 12px;
+    }
+  }
+}

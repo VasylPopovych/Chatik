@@ -9,6 +9,18 @@ const Message = ({ props, avatar }) => {
     let formatedTime = time.toLocaleTimeString().slice(-11, -6) + time.toLocaleTimeString().slice(-3);
     return date + ", " + formatedTime;
   };
+
+  if (props.isMyMessage) {
+    return (
+      <div className={classes.wrapper_myMessage}>
+        <div className={classes.body}>
+          <div className={classes.text}>{props.text}</div>
+          <div className={classes.time}>{getDateFormat(props.time)}</div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className={classes.wrapper}>
       <Avatar props={avatar} />
