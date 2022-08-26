@@ -1,6 +1,5 @@
 .wrapper {
   display: flex;
-  border: 1px solid grey;
   margin: 10px;
   padding-right: 10px;
   .body {
@@ -22,7 +21,6 @@
 .wrapper_myMessage {
   display: flex;
   justify-content: flex-end;
-  border: 1px solid grey;
   margin: 10px;
   padding-right: 10px;
   .body {

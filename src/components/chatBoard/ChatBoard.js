@@ -1,6 +1,4 @@
-import React from "react";
 import classes from "./chatBoard.module.scss";
-import ChatBoardHeader from "./chatBoardHeader/ChatBoardHeader";
 import MessageInput from "./messageInput/MessageInput";
 import MessagesBox from "./messagesBox/MessagesBox";
 

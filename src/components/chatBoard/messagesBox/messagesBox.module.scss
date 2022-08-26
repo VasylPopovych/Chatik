@@ -1,5 +1,8 @@
-.messagesBox {
+.wrapper {
+  display: flex;
+  flex-direction: column;
   border: 1px solid black;
   background-color: rgb(43, 168, 226);
+  height: 100%;
   flex: 1 1 auto;
 }
