@@ -17,6 +17,12 @@ export const messagesHistoryUser1 = [
     text: "How are you??",
     time: new Date(1661507131180),
   },
+  {
+    id: 4,
+    owner: true,
+    text: "last message for test",
+    time: new Date(1660111178111),
+  },
 ];
 
 export const messagesHistoryUser2 = [
@@ -79,6 +85,12 @@ export const messagesHistoryUser4 = [
     owner: true,
     text: "zxc zxc zxc zc zc zxc",
     time: new Date(1614111111111),
+  },
+  {
+    id: 4,
+    owner: true,
+    text: "Thanks to your support our country",
+    time: new Date(1661535409500),
   },
 ];
 
