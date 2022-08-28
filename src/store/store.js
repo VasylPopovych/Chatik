@@ -35,8 +35,8 @@ export default class Store {
     const num = MessageService.getRandomNumberForResponseDelay();
     try {
       const res = await MessageService.getMessageFromAPI();
-      const message = MessageService.createNewMessage(res.data.value, false);
       setTimeout(() => {
+        const message = MessageService.createNewMessage(res.data.value, false);
         this.data.map((chat) => {
           if (chat.id === this.chatForResponse[0]) {
             chat.messagesHistory.push(message);
