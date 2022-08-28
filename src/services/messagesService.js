@@ -7,7 +7,15 @@ const $api = axios.create({
 });
 
 export default class MessageService {
+  static createNewMessage(messageText, isMyMessage) {
+    return { id: Date.now(), isMyMessage: isMyMessage, text: messageText, time: new Date() };
+  }
+
   static async getMessageFromAPI() {
     return $api.get();
+  }
+
+  static getRandomNumberForResponseDelay() {
+    return Math.floor(Math.random() * (15 - 10 + 1) + 10) * 1000;
   }
 }

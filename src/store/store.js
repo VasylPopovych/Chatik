@@ -5,6 +5,7 @@ import MessageService from "../services/messagesService";
 export default class Store {
   data = chatsData;
   selectedChat = 1;
+  chatForResponse = [];
 
   constructor() {
     makeAutoObservable(this);
@@ -14,31 +15,38 @@ export default class Store {
     this.selectedChat = id;
   }
 
-  addNewMessage(textMessage) {
-    const message = {
-      id: Date.now(),
-      isMyMessage: true,
-      text: textMessage,
-      time: new Date(),
-    };
+  sortingChats() {
+    this.data.sort((a, b) => b.messagesHistory.at(-1).time.getTime() - a.messagesHistory.at(-1).time.getTime());
+    console.log("list of chats sorted!");
+  }
+
+  addNewMessage(messageText) {
+    const message = MessageService.createNewMessage(messageText, true);
     this.data.map((chat) => {
-      if (chat.id === this.selectedChat) chat.messagesHistory.push(message);
+      if (chat.id === this.selectedChat) {
+        chat.messagesHistory.push(message);
+        this.chatForResponse.push(this.selectedChat);
+      }
     });
+    this.sortingChats();
   }
 
   async addNewMessageFromAPI() {
-    const res = await MessageService.getMessageFromAPI();
-    console.log(res.data.value);
-    const message = {
-      id: Date.now(),
-      isMyMessage: false,
-      text: res.data.value,
-      time: new Date(),
-    };
-    setTimeout(() => {
-      this.data.map((chat) => {
-        if (chat.id === this.selectedChat) chat.messagesHistory.push(message);
-      });
-    }, 3000);
+    const num = MessageService.getRandomNumberForResponseDelay();
+    try {
+      const res = await MessageService.getMessageFromAPI();
+      const message = MessageService.createNewMessage(res.data.value, false);
+      setTimeout(() => {
+        this.data.map((chat) => {
+          if (chat.id === this.chatForResponse[0]) {
+            chat.messagesHistory.push(message);
+            this.sortingChats();
+            this.chatForResponse.shift();
+          }
+        });
+      }, num);
+    } catch (error) {
+      console.log(`Can not get message from API. Error: ${error}`);
+    }
   }
 }

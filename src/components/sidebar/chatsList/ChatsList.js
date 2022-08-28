@@ -8,8 +8,7 @@ const ChatsList = () => {
   const { store } = useContext(Context);
   useEffect(() => {
     store.data.sort((a, b) => b.messagesHistory.at(-1).time.getTime() - a.messagesHistory.at(-1).time.getTime());
-    console.log("list of chats sorted!");
-  }, [store.data.messagesHistory]);
+  }, []);
 
   return (
     <div className={classes.chatsList}>
