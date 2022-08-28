@@ -1,4 +1,4 @@
-export const messagesHistoryUser1 = [
+export const messagesHistoryChat1 = [
   {
     id: 1,
     isMyMessage: true,
@@ -20,12 +20,12 @@ export const messagesHistoryUser1 = [
   {
     id: 4,
     isMyMessage: true,
-    text: "last message for test",
-    time: new Date(1660111178111),
+    text: "last message for test11122233",
+    time: new Date(),
   },
 ];
 
-export const messagesHistoryUser2 = [
+export const messagesHistoryChat2 = [
   {
     id: 1,
     isMyMessage: true,
@@ -46,7 +46,7 @@ export const messagesHistoryUser2 = [
   },
 ];
 
-export const messagesHistoryUser3 = [
+export const messagesHistoryChat3 = [
   {
     id: 1,
     isMyMessage: true,
@@ -67,7 +67,7 @@ export const messagesHistoryUser3 = [
   },
 ];
 
-export const messagesHistoryUser4 = [
+export const messagesHistoryChat4 = [
   {
     id: 1,
     isMyMessage: true,
@@ -94,7 +94,7 @@ export const messagesHistoryUser4 = [
   },
 ];
 
-export const messagesHistoryUser5 = [
+export const messagesHistoryChat5 = [
   {
     id: 1,
     isMyMessage: true,

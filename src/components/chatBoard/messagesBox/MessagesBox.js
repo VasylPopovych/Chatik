@@ -7,19 +7,20 @@ import ChatBoardHeader from "../chatBoardHeader/ChatBoardHeader";
 
 const MessagesBox = () => {
   const { store } = useContext(Context);
-  const [selectedUserId, setSelectedUserId] = useState(store.selectedUser);
-  const selectedUsedData = store.data.filter((user) => user.id === selectedUserId);
+  const [selectedChatId, setSelectedUserId] = useState(store.selectedChat);
+  const selectedChatData = store.data.filter((user) => user.id === selectedChatId);
 
   useEffect(() => {
-    setSelectedUserId(store.selectedUser);
-  }, [store.selectedUser]);
+    setSelectedUserId(store.selectedChat);
+    console.log(`selected another user, with id: ${store.selectedChat}`);
+  }, [store.selectedChat]);
 
   return (
     <div className={classes.wrapper}>
-      <ChatBoardHeader props={selectedUsedData[0]} />
+      <ChatBoardHeader props={selectedChatData[0]} />
       <div className={classes.messagesBox}>
-        {selectedUsedData[0].messagesHistory.map((message) => (
-          <Message props={message} avatar={selectedUsedData[0].avatar} key={message.id} />
+        {selectedChatData[0].messagesHistory.map((message) => (
+          <Message props={message} avatar={selectedChatData[0].avatar} key={message.id} />
         ))}
       </div>
     </div>

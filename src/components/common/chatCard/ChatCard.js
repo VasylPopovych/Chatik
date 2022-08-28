@@ -5,8 +5,9 @@ import { Context } from "../../..";
 
 const ChatCard = ({ props }) => {
   const { store } = useContext(Context);
-  const getSelectedUser = () => {
-    store.setSelectedUser(props.id);
+  const getSelectedChat = () => {
+    store.setSelectedChat(props.id);
+    console.log(`From cahtCard: ${props.id}`);
   };
   const getDateFormat = (time) => {
     time = time.toDateString().slice(4);
@@ -15,7 +16,7 @@ const ChatCard = ({ props }) => {
   };
 
   return (
-    <div onClick={getSelectedUser} className={classes.wrapper}>
+    <div onClick={getSelectedChat} className={classes.wrapper}>
       <Avatar props={props.avatar} isVerified={true} />
       <div className={classes.name_message}>
         <div className={classes.name}>{props.name}</div>
