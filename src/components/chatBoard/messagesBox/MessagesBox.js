@@ -7,20 +7,21 @@ import ChatBoardHeader from "../chatBoardHeader/ChatBoardHeader";
 
 const MessagesBox = () => {
   const { store } = useContext(Context);
-  const [selectedChatId, setSelectedUserId] = useState(store.selectedChat);
-  const selectedChatData = store.data.filter((user) => user.id === selectedChatId);
 
-  useEffect(() => {
-    setSelectedUserId(store.selectedChat);
-    console.log(`selected another user, with id: ${store.selectedChat}`);
-  }, [store.selectedChat]);
+  if (store.selectedChat === 0) {
+    return (
+      <div className={classes.wrapper_empty_chat}>
+        <h1>Select a chat to start messaging</h1>
+      </div>
+    );
+  }
 
   return (
     <div className={classes.wrapper}>
-      <ChatBoardHeader props={selectedChatData[0]} />
+      <ChatBoardHeader props={store.selectedChatData[0]} />
       <div className={classes.messagesBox}>
-        {selectedChatData[0].messagesHistory.map((message) => (
-          <Message props={message} avatar={selectedChatData[0].avatar} key={message.id} />
+        {store.selectedChatData[0].messagesHistory.map((message) => (
+          <Message props={message} avatar={store.selectedChatData[0].avatar} key={message.id} />
         ))}
       </div>
     </div>
