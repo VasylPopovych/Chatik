@@ -6,9 +6,8 @@ export default class Store {
   data = chatsData;
   selectedChat = 0;
   chatForResponse = [];
-  dataForSearch = "";
-  searchBarStatus = false;
   selectedChatData;
+  preSearchingData = this.data;
 
   constructor() {
     makeAutoObservable(this);
@@ -24,11 +23,12 @@ export default class Store {
 
   sortingChats() {
     this.data.sort((a, b) => b.messagesHistory.at(-1).time.getTime() - a.messagesHistory.at(-1).time.getTime());
-    console.log("list of chats sorted!");
   }
 
-  filterChats() {
-    this.data = this.data.filter((chat) => chat.name.includes("Boris"));
+  filterChats(value) {
+    this.data = this.preSearchingData;
+    this.data = this.data.filter((chat) => chat.name.toLowerCase().includes(value.toLowerCase()));
+    this.sortingChats();
   }
 
   addNewMessage(messageText) {
