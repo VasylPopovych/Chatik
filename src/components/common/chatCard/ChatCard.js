@@ -7,7 +7,7 @@ const ChatCard = ({ props }) => {
   const { store } = useContext(Context);
   const getSelectedChat = () => {
     store.setSelectedChat(props.id);
-    console.log(`From cahtCard: ${props.id}`);
+    store.selectChatMessages(props.id);
   };
   const getDateFormat = (time) => {
     time = time.toDateString().slice(4);

@@ -4,8 +4,10 @@ import MessageService from "../services/messagesService";
 
 export default class Store {
   data = chatsData;
-  selectedChat = 1;
+  selectedChat = 0;
   chatForResponse = [];
+  selectedChatData;
+  preSearchingData = this.data;
 
   constructor() {
     makeAutoObservable(this);
@@ -15,9 +17,18 @@ export default class Store {
     this.selectedChat = id;
   }
 
+  selectChatMessages(selectedChatId) {
+    this.selectedChatData = this.data.filter((chat) => chat.id === selectedChatId);
+  }
+
   sortingChats() {
     this.data.sort((a, b) => b.messagesHistory.at(-1).time.getTime() - a.messagesHistory.at(-1).time.getTime());
-    console.log("list of chats sorted!");
+  }
+
+  filterChats(value) {
+    this.data = this.preSearchingData;
+    this.data = this.data.filter((chat) => chat.name.toLowerCase().includes(value.toLowerCase()));
+    this.sortingChats();
   }
 
   addNewMessage(messageText) {
