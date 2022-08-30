@@ -1,13 +1,16 @@
-import { useState } from "react";
+import { useState, useContext, useEffect } from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
 import ChatPage from "./pages/chatPage/ChatPage";
 import AuthPage from "./pages/authPage/AuthPage";
 import NotFoundPage from "./pages/notFoundPage/NotFoundPage";
+import { Context } from "..";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 const Router = () => {
-  const [isLoggedUser, setLoggedUser] = useState(true);
+  const { firebaseAuth, store } = useContext(Context);
+  const [user] = useAuthState(firebaseAuth);
 
-  if (isLoggedUser) {
+  if (user || localStorage.logedAsGuest) {
     return (
       <Routes>
         <Route path="/" element={<ChatPage />} />
