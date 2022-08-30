@@ -12,9 +12,12 @@ const ChatsList = () => {
 
   return (
     <div className={classes.wrapper}>
-      {store.data.map((chat) => (
-        <ChatCard props={chat} key={chat.id} />
-      ))}
+      <div className={classes.title}>Chats</div>
+      <div className={classes.chatsList}>
+        {store.data.map((chat) => (
+          <ChatCard props={chat} key={chat.id} />
+        ))}
+      </div>
     </div>
   );
 };

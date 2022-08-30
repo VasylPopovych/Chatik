@@ -1,22 +1,42 @@
 .wrapper {
   display: flex;
-  min-height: 150px;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100px;
   width: 100%;
   background-color: white;
-  border: 1px solid grey;
+  padding: 0px 10px;
   cursor: pointer;
-  justify-content: space-between;
+  border-bottom: 2px solid #c0c0c0;
+  color: #585858;
   &:hover {
-    background-color: gainsboro;
+    background-color: #e8e8e8;
   }
-  .name_message {
-    .name {
-      font-weight: bold;
-    }
-    .message {
+  .main_block {
+    display: flex;
+    flex: 0 0 73%;
+    .name_message_block {
+      margin-left: 10px;
+      flex: 0 1 auto;
+      .name {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-weight: bold;
+        color: #505050;
+      }
+      .message {
+        height: 35px;
+        font-size: 14px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-all;
+      }
     }
   }
   .time {
     font-size: 12px;
+    margin-right: 0px;
+    font-weight: bold;
+    color: #505050;
   }
 }

@@ -18,7 +18,9 @@ const SidebarHeader = () => {
 
   return (
     <div className={classes.wrapper}>
-      {user ? <Avatar props={user.photoURL} isVerified={true} /> : <Avatar props={guest_avatar} isVerified={true} />}
+      <div className={classes.avatar}>
+        {user ? <Avatar props={user.photoURL} isVerified={true} /> : <Avatar props={guest_avatar} isVerified={true} />}
+      </div>
       <div className={classes.logout_button} onClick={logout}>
         Logout
       </div>

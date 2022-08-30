@@ -20,7 +20,7 @@ export const messagesHistoryChat1 = [
   {
     id: 4,
     isMyMessage: true,
-    text: "last message for test11122233",
+    text: "Module Replacement enabled, Live Reloading enabled, Progress disabled, Overlay enabled.",
     time: new Date(),
   },
 ];

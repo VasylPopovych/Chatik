@@ -17,10 +17,12 @@ const ChatCard = ({ props }) => {
 
   return (
     <div onClick={getSelectedChat} className={classes.wrapper}>
-      <Avatar props={props.avatar} isVerified={true} />
-      <div className={classes.name_message}>
-        <div className={classes.name}>{props.name}</div>
-        <div className={classes.message}>{props.messagesHistory.at(-1).text}</div>
+      <div className={classes.main_block}>
+        <Avatar props={props.avatar} isVerified={true} />
+        <div className={classes.name_message_block}>
+          <div className={classes.name}>{props.name}</div>
+          <div className={classes.message}>{props.messagesHistory.at(-1).text}</div>
+        </div>
       </div>
       <div className={classes.time}>{getDateFormat(props.messagesHistory.at(-1).time)}</div>
     </div>
