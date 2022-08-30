@@ -1,4 +1,26 @@
-.sidebarHeader {
+.wrapper {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border: 1px solid black;
   background-color: blueviolet;
+  .avatar {
+    height: 40px;
+    width: 40px;
+    position: relative;
+    border-radius: 50%;
+  }
+  .logout_button {
+    height: 35px;
+    width: 55px;
+    text-align: center;
+    padding-top: 7px;
+    cursor: pointer;
+    border: 1px solid grey;
+    background: #8b7f7f;
+    background: linear-gradient(354deg, #8b7f7f 0%, #586258 80%);
+    background: -webkit-linear-gradient(354deg, #8b7f7f 0%, #586258 80%);
+    background: -moz-linear-gradient(354deg, #8b7f7f 0%, #586258 80%);
+  }
 }

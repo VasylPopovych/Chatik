@@ -13,6 +13,10 @@ export default class Store {
     makeAutoObservable(this);
   }
 
+  setAuthUser(bool) {
+    this.isLogged = bool;
+  }
+
   setSelectedChat(id) {
     this.selectedChat = id;
   }
