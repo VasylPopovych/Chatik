@@ -11,7 +11,7 @@ const ChatsList = () => {
   }, []);
 
   return (
-    <div className={classes.chatsList}>
+    <div className={classes.wrapper}>
       {store.data.map((chat) => (
         <ChatCard props={chat} key={chat.id} />
       ))}

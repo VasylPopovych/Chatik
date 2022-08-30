@@ -6,7 +6,7 @@ import classes from "./sidebar.module.scss";
 
 const Sidebar = () => {
   return (
-    <aside className={classes.sideBar}>
+    <aside className={classes.wrapper}>
       <SidebarHeader />
       <SearchBar />
       <ChatsList />

@@ -1,6 +1,8 @@
 import React, { useState, useContext, useEffect } from "react";
 import classes from "./searchBar.module.scss";
 import { Context } from "../../..";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 const SearchBar = () => {
   const { store } = useContext(Context);
@@ -13,8 +15,11 @@ const SearchBar = () => {
   return (
     <div className={classes.wrapper}>
       <form>
-        <button type="button">search</button>
+        <div className={classes.icon}>
+          <FontAwesomeIcon icon={faSearch} />
+        </div>
         <input
+          placeholder="Search or start new chat"
           type="text"
           value={searchData}
           onInput={(e) => {

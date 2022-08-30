@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import classes from "./authPage.module.scss";
 import chat_logo from "../../../assets/chat_logo.jpg";
@@ -10,13 +10,11 @@ const AuthPage = () => {
   const { firebaseAuth } = useContext(Context);
   const provider = new GoogleAuthProvider();
   const navigate = useNavigate();
-  const [test, setTest] = useState(false);
 
   const loginGoogle = () => {
     signInWithPopup(firebaseAuth, provider)
       .then((result) => {
         const user = result.user;
-        console.log(user);
       })
       .catch((error) => {
         console.log(error);
@@ -44,4 +42,4 @@ const AuthPage = () => {
   );
 };
 
-export default observer(AuthPage);
+export default AuthPage;

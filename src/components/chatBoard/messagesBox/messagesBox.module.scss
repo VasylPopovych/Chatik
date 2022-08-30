@@ -3,8 +3,9 @@
   flex-direction: column;
   border: 1px solid black;
   background-color: rgb(43, 168, 226);
-  height: 100%;
   flex: 1 1 auto;
+  overflow-y: auto;
+  height: 100%;
 }
 
 .wrapper_empty_chat {
@@ -16,6 +17,7 @@
   background-color: rgb(43, 168, 226);
   height: 100%;
   flex: 1 1 auto;
+  overflow-y: auto;
   h1 {
     padding: 10px;
     font-size: 30px;

@@ -5,7 +5,7 @@ import classes from "./chatPage.module.scss";
 
 const ChatPage = () => {
   return (
-    <div className={classes.chatPage}>
+    <div className={classes.wrapper}>
       <Sidebar />
       <ChatBoard />
     </div>

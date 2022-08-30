@@ -1,26 +1,24 @@
 .wrapper {
-  height: 50px;
+  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid black;
-  background-color: blueviolet;
-  .avatar {
-    height: 40px;
-    width: 40px;
-    position: relative;
-    border-radius: 50%;
-  }
+  background-color: #f0f0f0;
+  padding: 0px 10px;
   .logout_button {
     height: 35px;
-    width: 55px;
+    width: 65px;
     text-align: center;
     padding-top: 7px;
     cursor: pointer;
-    border: 1px solid grey;
-    background: #8b7f7f;
-    background: linear-gradient(354deg, #8b7f7f 0%, #586258 80%);
-    background: -webkit-linear-gradient(354deg, #8b7f7f 0%, #586258 80%);
-    background: -moz-linear-gradient(354deg, #8b7f7f 0%, #586258 80%);
+    border-radius: 5px;
+    border: 1px solid rgb(161, 160, 160);
+    background: #d8d8d8;
+    box-shadow: 1px 1px 1px 0px rgba(102, 100, 100, 0.49);
+    -webkit-box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.49);
+    -moz-box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.49);
+    &:hover {
+      background-color: #c8c8c8;
+    }
   }
 }

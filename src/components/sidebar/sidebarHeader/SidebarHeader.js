@@ -4,6 +4,7 @@ import guest_avatar from "../../../assets/guest_avatar.jpg";
 import VerificationIcon from "../../common/verificationIcon/VerificationIcon";
 import { Context } from "../../..";
 import { useAuthState } from "react-firebase-hooks/auth";
+import Avatar from "../../common/avatar/Avatar";
 
 const SidebarHeader = () => {
   const { firebaseAuth } = useContext(Context);
@@ -17,10 +18,7 @@ const SidebarHeader = () => {
 
   return (
     <div className={classes.wrapper}>
-      <div className={classes.avatar}>
-        {user ? <img src={user.photoURL} alt="avatar" /> : <img src={guest_avatar} alt="avatar" />}
-        <VerificationIcon />
-      </div>
+      {user ? <Avatar props={user.photoURL} isVerified={true} /> : <Avatar props={guest_avatar} isVerified={true} />}
       <div className={classes.logout_button} onClick={logout}>
         Logout
       </div>
