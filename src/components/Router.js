@@ -5,10 +5,13 @@ import AuthPage from "./pages/authPage/AuthPage";
 import NotFoundPage from "./pages/notFoundPage/NotFoundPage";
 import { Context } from "..";
 import { useAuthState } from "react-firebase-hooks/auth";
+import Loader from "./common/loader/Loader";
 
 const Router = () => {
-  const { firebaseAuth, store } = useContext(Context);
-  const [user] = useAuthState(firebaseAuth);
+  const { firebaseAuth } = useContext(Context);
+  const [user, loading] = useAuthState(firebaseAuth);
+
+  if (loading) return <Loader />;
 
   if (user || localStorage.logedAsGuest) {
     return (
