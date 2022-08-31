@@ -40,3 +40,27 @@
     color: #505050;
   }
 }
+
+@media (max-width: 850px) {
+  .time {
+    display: none;
+  }
+  .main_block {
+    flex: 0 0 100% !important;
+  }
+}
+
+@media (max-width: 650px) {
+  .message {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .main_block {
+    justify-content: center;
+  }
+  .name_message_block {
+    display: none;
+  }
+}

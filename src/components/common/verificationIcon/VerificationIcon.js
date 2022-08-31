@@ -5,7 +5,7 @@ import verificationIcon from "../../../assets/verificationIcon.jpg";
 const VerificationIcon = () => {
   return (
     <div className={classes.wrapper}>
-      <img src={verificationIcon} alt="verification_icon" />
+      <img className={classes.verification_icon} src={verificationIcon} alt="verification_icon" />
     </div>
   );
 };
