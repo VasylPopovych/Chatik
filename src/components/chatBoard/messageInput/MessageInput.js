@@ -14,7 +14,6 @@ const MessageInput = () => {
     store.addNewMessage(message);
     store.addNewMessageFromAPI();
     setMessage("");
-    console.log(message);
   };
 
   return (
