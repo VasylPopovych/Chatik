@@ -1,4 +1,25 @@
-.sidebarHeader {
-  border: 1px solid black;
-  background-color: blueviolet;
+.wrapper {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 0px 10px;
+  .avatar {
+    margin-top: 10px;
+  }
+  .logout_button {
+    height: 35px;
+    width: 65px;
+    text-align: center;
+    padding-top: 7px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid rgb(161, 160, 160);
+    background: #d8d8d8;
+    color: #646363;
+    &:hover {
+      background-color: #c8c8c8;
+    }
+  }
 }

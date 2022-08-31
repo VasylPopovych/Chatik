@@ -1,6 +1,8 @@
 import React, { useState, useContext, useEffect } from "react";
 import classes from "./messageInput.module.scss";
 import { Context } from "../../../";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
 const MessageInput = () => {
   const [message, setMessage] = useState("");
@@ -19,9 +21,15 @@ const MessageInput = () => {
     <div className={classes.wrapper}>
       <div className={classes.input_wrapper}>
         <form>
-          <input value={message} onChange={(e) => setMessage(e.target.value)} type="text" className={classes.input} />
+          <input
+            placeholder="Type your message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            type="text"
+            className={classes.input}
+          />
           <button onClick={sendNewMessage} className={classes.icon}>
-            send
+            <FontAwesomeIcon icon={faPaperPlane} size="lg" color="grey" />
           </button>
         </form>
       </div>

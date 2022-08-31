@@ -7,14 +7,17 @@ import { observer } from "mobx-react-lite";
 const ChatsList = () => {
   const { store } = useContext(Context);
   useEffect(() => {
-    store.data.sort((a, b) => b.messagesHistory.at(-1).time.getTime() - a.messagesHistory.at(-1).time.getTime());
+    store.sortingChats();
   }, []);
 
   return (
-    <div className={classes.chatsList}>
-      {store.data.map((chat) => (
-        <ChatCard props={chat} key={chat.id} />
-      ))}
+    <div className={classes.wrapper}>
+      <div className={classes.title}>Chats</div>
+      <div className={classes.chatsList}>
+        {store.data.map((chat) => (
+          <ChatCard props={chat} key={chat.id} />
+        ))}
+      </div>
     </div>
   );
 };

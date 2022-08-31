@@ -1,19 +1,25 @@
 .wrapper {
   display: flex;
   margin: 10px;
+  margin-bottom: 20px;
   padding-right: 10px;
   .body {
     display: flex;
     flex-direction: column;
-    padding-left: 20px;
+    padding: 0px 10px;
     .text {
+      display: flex;
+      justify-content: center;
       border-radius: 25px;
-      border: 1px solid grey;
-      background-color: burlywood;
-      padding: 10px;
+      background-color: #002244;
+      padding: 15px;
+      color: #f0f0f0;
+      font-size: 14px;
     }
     .time {
       font-size: 12px;
+      margin-top: 10px;
+      margin-left: 10px;
     }
   }
 }
@@ -22,19 +28,24 @@
   display: flex;
   justify-content: flex-end;
   margin: 10px;
+  margin-bottom: 20px;
   padding-right: 10px;
   .body {
     display: flex;
     flex-direction: column;
-    padding-left: 20px;
     .text {
       border-radius: 25px;
-      border: 1px solid grey;
-      background-color: rgb(92, 86, 78);
-      padding: 10px;
+      background-color: #a0a0a0;
+      padding: 15px;
+      font-size: 14px;
+      margin-left: 35px;
+      color: #282828;
     }
     .time {
+      padding-top: 10px;
+      padding-left: 5px;
       font-size: 12px;
+      text-align: right;
     }
   }
 }

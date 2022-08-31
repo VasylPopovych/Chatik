@@ -1,13 +1,19 @@
-import { useState } from "react";
+import { useState, useContext, useEffect } from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
 import ChatPage from "./pages/chatPage/ChatPage";
 import AuthPage from "./pages/authPage/AuthPage";
 import NotFoundPage from "./pages/notFoundPage/NotFoundPage";
+import { Context } from "..";
+import { useAuthState } from "react-firebase-hooks/auth";
+import Loader from "./common/loader/Loader";
 
 const Router = () => {
-  const [isLoggedUser, setLoggedUser] = useState(true);
+  const { firebaseAuth } = useContext(Context);
+  const [user, loading] = useAuthState(firebaseAuth);
 
-  if (isLoggedUser) {
+  if (loading) return <Loader />;
+
+  if (user || localStorage.logedAsGuest) {
     return (
       <Routes>
         <Route path="/" element={<ChatPage />} />
