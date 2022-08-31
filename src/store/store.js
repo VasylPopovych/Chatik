@@ -27,6 +27,7 @@ export default class Store {
 
   sortingChats() {
     this.data.sort((a, b) => b.messagesHistory.at(-1).time.getTime() - a.messagesHistory.at(-1).time.getTime());
+    window.scrollBy(0, 100);
   }
 
   filterChats(value) {
