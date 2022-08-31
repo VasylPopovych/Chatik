@@ -23,3 +23,13 @@
     }
   }
 }
+
+@media (max-width: 450px) {
+  .wrapper {
+    flex-direction: column;
+    height: 150px !important;
+  }
+  .logout_button {
+    margin-top: 15px;
+  }
+}
