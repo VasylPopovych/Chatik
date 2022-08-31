@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/chatik/static/css/main.5ad17c22.css",
+    "main.js": "/chatik/static/js/main.8dbfe466.js",
+    "static/media/user4.jpg": "/chatik/static/media/user4.3a8e0d089ecd660a5eb0.jpg",
+    "static/media/verificationIcon.jpg": "/chatik/static/media/verificationIcon.c5ece25d0f7cb9f718de.jpg",
+    "index.html": "/chatik/index.html",
+    "main.5ad17c22.css.map": "/chatik/static/css/main.5ad17c22.css.map",
+    "main.8dbfe466.js.map": "/chatik/static/js/main.8dbfe466.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5ad17c22.css",
+    "static/js/main.8dbfe466.js"
+  ]
+}
