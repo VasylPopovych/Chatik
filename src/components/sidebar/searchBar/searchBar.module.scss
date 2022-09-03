@@ -19,6 +19,9 @@
     align-items: center;
     border-radius: 25px;
     background-color: #f8f8f8;
+    &:focus {
+      border: 2px solid red;
+    }
     .icon {
       font-size: 13px;
       font-weight: bold;
@@ -34,4 +37,8 @@
       padding-left: 8px;
     }
   }
+}
+
+.focused {
+  border: 2px solid green;
 }

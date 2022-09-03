@@ -12,6 +12,9 @@
   &:hover {
     background-color: #e8e8e8;
   }
+  &:focus {
+    background-color: #7c4b4b;
+  }
   .main_block {
     display: flex;
     flex: 0 0 73%;

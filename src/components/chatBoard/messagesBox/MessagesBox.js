@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useState } from "react";
+import React, { useContext } from "react";
 import { Context } from "../../..";
 import classes from "./messagesBox.module.scss";
 import Message from "../../common/message/Message";
