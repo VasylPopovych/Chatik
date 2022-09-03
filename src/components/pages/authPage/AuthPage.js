@@ -30,6 +30,7 @@ const AuthPage = () => {
     <div className={classes.wrapper}>
       <div className={classes.popUp}>
         <img src={chat_logo} alt="logo" />
+        <h1 className={classes.welcomeTitle}>WELCOME</h1>
         <div className={classes.login_button} onClick={loginGuest}>
           Login as Guest
         </div>

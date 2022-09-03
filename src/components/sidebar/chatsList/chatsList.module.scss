@@ -7,7 +7,6 @@
   .title {
     display: flex;
     align-items: center;
-
     height: 130px;
     font-size: 25px;
     font-weight: bold;
@@ -27,5 +26,11 @@
 @media (max-width: 450px) {
   .title {
     justify-content: center;
+  }
+}
+
+@media (max-height: 400px) {
+  .title {
+    display: none !important;
   }
 }

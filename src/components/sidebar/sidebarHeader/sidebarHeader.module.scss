@@ -10,14 +10,15 @@
   }
   .logout_button {
     height: 35px;
-    width: 65px;
+    width: 70px;
     text-align: center;
     padding-top: 7px;
     cursor: pointer;
     border-radius: 5px;
     border: 1px solid rgb(161, 160, 160);
-    background: #d8d8d8;
-    color: #646363;
+    background: #afc7c0;
+    color: whitesmoke;
+    font-weight: bold;
     &:hover {
       background-color: #c8c8c8;
     }

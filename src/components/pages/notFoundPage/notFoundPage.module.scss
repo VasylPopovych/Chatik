@@ -12,16 +12,19 @@
   h1 {
     font-size: 50px;
     font-weight: bold;
+    color: whitesmoke;
   }
   button {
     margin-top: 20px;
     background-color: rgb(159, 168, 168);
-    height: 40px;
-    width: 120px;
+    height: 50px;
+    width: 150px;
     border-radius: 5px;
     font-weight: bold;
+    font-size: 18px;
+    color: whitesmoke;
     &:hover {
-      background-color: #726d6b;
+      background-color: #bdb8b8;
     }
   }
 }
