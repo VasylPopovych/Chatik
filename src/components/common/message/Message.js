@@ -15,7 +15,7 @@ const Message = ({ props, avatar }) => {
       <div className={classes.wrapper_myMessage}>
         <div className={classes.body}>
           <div className={classes.text}>{props.text}</div>
-          <div className={classes.time}>{getDateFormat(props.time)}</div>
+          <div className={classes.time}>{getDateFormat(new Date(props.time))}</div>
         </div>
       </div>
     );
@@ -26,7 +26,7 @@ const Message = ({ props, avatar }) => {
       <Avatar props={avatar} />
       <div className={classes.body}>
         <div className={classes.text}>{props.text}</div>
-        <div className={classes.time}>{getDateFormat(props.time)}</div>
+        <div className={classes.time}>{getDateFormat(new Date(props.time))}</div>
       </div>
     </div>
   );

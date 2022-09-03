@@ -1,9 +1,8 @@
 import { makeAutoObservable } from "mobx";
-import { chatsData } from "./chatsData";
 import MessageService from "../services/messagesService";
 
 export default class Store {
-  data = chatsData;
+  data = this.setDataToStorage();
   selectedChat = 0;
   chatForResponse = [];
   selectedChatData;
@@ -11,6 +10,10 @@ export default class Store {
 
   constructor() {
     makeAutoObservable(this);
+  }
+
+  setDataToStorage() {
+    this.data = JSON.parse(localStorage.getItem("chatsData"));
   }
 
   setAuthUser(bool) {
@@ -26,12 +29,15 @@ export default class Store {
   }
 
   sortingChats() {
-    this.data.sort((a, b) => b.messagesHistory.at(-1).time.getTime() - a.messagesHistory.at(-1).time.getTime());
-    window.scrollBy(0, 100);
+    if (this.data) {
+      this.data.sort(
+        (a, b) => new Date(b.messagesHistory.at(-1).time).getTime() - new Date(a.messagesHistory.at(-1).time).getTime()
+      );
+    }
   }
 
   filterChats(value) {
-    this.data = this.preSearchingData;
+    this.data = JSON.parse(localStorage.getItem("chatsData"));
     this.data = this.data.filter((chat) => chat.name.toLowerCase().includes(value.toLowerCase()));
     this.sortingChats();
   }
@@ -45,6 +51,7 @@ export default class Store {
       }
     });
     this.sortingChats();
+    localStorage.setItem("chatsData", JSON.stringify(this.data));
   }
 
   async addNewMessageFromAPI() {
@@ -58,6 +65,7 @@ export default class Store {
             chat.messagesHistory.push(message);
             this.sortingChats();
             this.chatForResponse.shift();
+            localStorage.setItem("chatsData", JSON.stringify(this.data));
           }
         });
       }, num);

@@ -4,7 +4,6 @@ import classes from "./authPage.module.scss";
 import chat_logo from "../../../assets/chat_logo.jpg";
 import { Context } from "../../..";
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import { observer } from "mobx-react-lite";
 
 const AuthPage = () => {
   const { firebaseAuth } = useContext(Context);

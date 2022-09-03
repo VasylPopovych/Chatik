@@ -24,7 +24,7 @@ const ChatCard = ({ props }) => {
           <div className={classes.message}>{props.messagesHistory.at(-1).text}</div>
         </div>
       </div>
-      <div className={classes.time}>{getDateFormat(props.messagesHistory.at(-1).time)}</div>
+      <div className={classes.time}>{getDateFormat(new Date(props.messagesHistory.at(-1).time))}</div>
     </div>
   );
 };
