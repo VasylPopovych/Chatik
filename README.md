@@ -15,3 +15,4 @@
 - Frebase Auth
 - Firebase Hosting
 - Font Awesome
+- ESLint
