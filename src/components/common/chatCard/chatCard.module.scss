@@ -72,13 +72,13 @@
   align-items: center;
   min-height: 100px;
   width: 100%;
-  background-color: #e8e8e8;
+  background-color: rgb(140, 202, 204);
   padding: 0px 10px;
   cursor: pointer;
   border-bottom: 2px solid #c0c0c0;
   color: #585858;
   &:hover {
-    background-color: #e8e8e8;
+    background-color: cadetblue;
   }
   .main_block {
     display: flex;

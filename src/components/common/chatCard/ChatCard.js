@@ -19,7 +19,6 @@ const ChatCard = ({ props }) => {
   return (
     <div
       onClick={getSelectedChat}
-      // selected chat don`t light, because after selecting chat need re-render
       className={(store.selectedChat === props.id && classes.wrapper_selected) || classes.wrapper}>
       <div className={classes.main_block}>
         <Avatar props={props.avatar} isVerified={true} />
