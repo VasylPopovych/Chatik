@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import Avatar from "../avatar/Avatar";
 import classes from "./chatCard.module.scss";
 import { Context } from "../../..";
+import { observer } from "mobx-react-lite";
 
 const ChatCard = ({ props }) => {
   const { store } = useContext(Context);
@@ -16,7 +17,9 @@ const ChatCard = ({ props }) => {
   };
 
   return (
-    <div onClick={getSelectedChat} className={classes.wrapper}>
+    <div
+      onClick={getSelectedChat}
+      className={(store.selectedChat === props.id && classes.wrapper_selected) || classes.wrapper}>
       <div className={classes.main_block}>
         <Avatar props={props.avatar} isVerified={true} />
         <div className={classes.name_message_block}>
@@ -29,4 +32,4 @@ const ChatCard = ({ props }) => {
   );
 };
 
-export default ChatCard;
+export default observer(ChatCard);

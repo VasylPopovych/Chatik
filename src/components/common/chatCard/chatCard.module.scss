@@ -12,9 +12,6 @@
   &:hover {
     background-color: #e8e8e8;
   }
-  &:focus {
-    background-color: #7c4b4b;
-  }
   .main_block {
     display: flex;
     flex: 0 0 73%;
@@ -65,5 +62,49 @@
   }
   .name_message_block {
     display: none;
+  }
+}
+
+//wrappper for selected chat
+.wrapper_selected {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100px;
+  width: 100%;
+  background-color: rgb(140, 202, 204);
+  padding: 0px 10px;
+  cursor: pointer;
+  border-bottom: 2px solid #c0c0c0;
+  color: #585858;
+  &:hover {
+    background-color: cadetblue;
+  }
+  .main_block {
+    display: flex;
+    flex: 0 0 73%;
+    .name_message_block {
+      margin-left: 10px;
+      flex: 0 1 auto;
+      .name {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-weight: bold;
+        color: #505050;
+      }
+      .message {
+        height: 35px;
+        font-size: 14px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-all;
+      }
+    }
+  }
+  .time {
+    font-size: 12px;
+    margin-right: 0px;
+    font-weight: bold;
+    color: #505050;
   }
 }

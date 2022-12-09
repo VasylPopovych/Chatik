@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import { Context } from "../../..";
 import classes from "./messagesBox.module.scss";
 import Message from "../../common/message/Message";
@@ -7,6 +7,11 @@ import ChatBoardHeader from "../chatBoardHeader/ChatBoardHeader";
 
 const MessagesBox = () => {
   const { store } = useContext(Context);
+  const bottomRef = useRef(null);
+
+  useEffect(() => {
+    bottomRef.current?.scrollIntoView();
+  }, [store.selectedChat, JSON.stringify(store.chatForResponse)]);
 
   if (store.selectedChat === 0) {
     return (
@@ -23,6 +28,7 @@ const MessagesBox = () => {
         {store.selectedChatData[0].messagesHistory.map((message) => (
           <Message props={message} avatar={store.selectedChatData[0].avatar} key={message.id} />
         ))}
+        <div ref={bottomRef}></div>
       </div>
     </div>
   );
