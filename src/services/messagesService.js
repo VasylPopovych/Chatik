@@ -16,6 +16,6 @@ export default class MessageService {
   }
 
   static getRandomNumberForResponseDelay() {
-    return Math.floor(Math.random() * (5 - 2) + 2) * 1000;
+    return Math.floor(Math.random() * (6 - 2) + 2) * 1000;
   }
 }
